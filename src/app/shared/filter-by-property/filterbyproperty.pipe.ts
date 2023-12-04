@@ -18,11 +18,7 @@ export class FilterbypropertyPipe implements PipeTransform {
                 const itemProperty = (item[searchingProperty] as string).toLowerCase();
                 const value = (searchValue as string).toLowerCase();
 
-                if (itemProperty.includes(value)) {
-                    return item;
-                }
-
-                return null;
+                return itemProperty.includes(value);
             });
         }
 
